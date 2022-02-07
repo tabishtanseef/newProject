@@ -85,7 +85,9 @@ span{
 		<div class="col-md-12 slant"><h2>1A Emily wants to be a vet</h2></div>
 		<div class="main">
 			<div class="row tt ques1">
-				<div class="col-4 "><center><img onclick="go(1)" id="1" src="img/activity.jpeg" style="margin-top:40px; width:90%;"><span>Animation</span></center></div>
+				<div class="col-4" data-toggle="modal" data-target="#myModal">
+					<center><img onclick="go(1)" id="1" src="img/activity.jpeg" style="margin-top:40px; width:90%;"><span>Animation</span></center>
+				</div>
 				<div class="col-4"><center><img onclick="go(1)" id="1" src="img/activity.jpeg" style="margin-top:40px; width:90%;"><span>Activity1</span></center></div>
 				<div class="col-4"><center><img onclick="go(1)" id="1" src="img/activity.jpeg" style="margin-top:40px; width:90%;"><span>Activity2</span></center></div>
 				<div class="col-4"><center><img onclick="go(1)" id="1" src="img/activity.jpeg" style="margin-top:40px; width:90%;"><span>Activity3</span></center></div>
@@ -95,6 +97,22 @@ span{
 		</div>
 	</div>
 </div>
+  <div class="modal fade bd-example-modal-lg" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe width="100%" height="500" src="https://www.youtube.com/embed/xtLfPyyBRlc?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+
+
+
 
 <div id="blocks">
 	<center><img src="../../../english/Welldone-white.gif" id="welldone"></center>
@@ -106,61 +124,5 @@ span{
 </body>
 <script>
 
-$(document).ready(function load(){
-    $(".ques2").hide();
-    $(".ques3").hide();
-    $(".ques4").hide();
-    $(".ques5").hide();
-	$("#blocks").hide();
-});
-var q,w,e,r,t,y;
-
-function go(a){
-	var audio = document.getElementById('audio1');
-	audio.play();
-	var b = a+10;
-	var c = b+100;
-	$('#'+a).css("-webkit-filter", "drop-shadow(5px 5px 1px #0f0)");
-	$('#'+a).css("filter", "drop-shadow(5px 5px 1px #0f0)");
-	$('#'+a).css("pointer-events", "none");
-	$('#'+b).css("pointer-events", "none");
-	$('#'+c).css("pointer-events", "none");
-	setTimeout(function(){ 
-		x = a+1;
-		if(x==2){$('#ques').html("b. Listen to music");}
-		else if(x==3){$('#ques').html("c. Type your name");}
-		else if(x==4){$('#ques').html("d. Play games");}
-		else if(x==5){$('#ques').html("e. Watch a movie");}
-		$('.ques'+a).hide(); 
-		$('.ques'+x).show(); 
-		if(x==6){
-			$('.slant').hide();
-			$('.main').hide();
-			$('#blocks').show(); 
-			setTimeout(function(){ 
-				window.location = '../index.html';
-			},1500);
-		}
-	},2000);
-	
-}
-
-
-function bo(b){
-	if(b>100){
-		c=b-100;
-		a=c-10;
-	}else{
-		c=b+100;
-		a=b-10;
-	}
-	var audio = document.getElementById('audio2');
-	audio.play();
-	$('#'+b).css("-webkit-filter", "drop-shadow(5px 5px 1px #f00)");
-	$('#'+b).css("filter", "drop-shadow(5px 5px 1px #f00)");
-	//$('#'+a).css("pointer-events", "none");
-	//$('#'+b).css("pointer-events", "none");
-	//$('#'+c).css("pointer-events", "none");
-}
 </script>
 </html>
