@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/class.css">
+	<style>
+	li{
+		font-family: 'Roboto', sans-serif;
+		font-weight:bold;
+		font-size:20px;
+		line-height:33px;
+		color:#06C8D9;
+		letter-spacing:1px;
+	}
+	</style>
+<!--===============================================================================================-->
+</head>
+<body>
+	<div class="limiter">
+		
+		<div class="container-login100">
+			<div class="wrap-login100" >
+				<div class="login100-pic" >
+				<center><img src="images/logog.png" style="width:80%; margin-top:-50px;">
+				<br><br>
+				<button class="c-button c-button--gooey" onclick="go(1)"> Class 1
+				  <div class="c-button__blobs">
+				  <div></div>
+				  <div></div>
+				  <div></div>
+				  </div>
+				</button>
+				<br><br><br>
+				<button class="c-button c-button--gooey" onclick="go(2)"> Class 2
+				  <div class="c-button__blobs">
+				  <div></div>
+				  <div></div>
+				  <div></div>
+				  </div>
+				</button>
+				<svg style="display: block; height: 0; width: 0;" version="1.1" xmlns="http://www.w3.org/2000/svg">
+				  <defs>
+					<filter id="goo">
+					  <feGaussianBlur result="blur" stdDeviation="10" in="SourceGraphic"></feGaussianBlur>
+					  <feColorMatrix result="goo" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" mode="matrix" in="blur"></feColorMatrix>
+					  <feBlend in2="goo" in="SourceGraphic"></feBlend>
+					</filter>
+				  </defs>
+				</svg>
+				</center>
+				</div>
+				<div class="login100-form class1" >
+					<h2 style="margin-top:-20px;">Class 1</h2><br>
+					<ol>
+						<li>1A Emily wants to be a vet</li>
+						<li>1B The taxi driver</li>
+						<li>2A Riding to school</li>
+						<li>2B The Peak Tram</li>
+						<li>3A Happy birthday, Tim!</li>
+						<li>3B Planning a party</li>
+						<li>4A At the airport</li>
+						<li>4B Fishing with Grandpa</li>
+						<li>5A Class President</li>
+						<li>5B Jerome and Owen</li>
+					</ol>
+				</div>
+				<div class="login100-form class2 hidden" >
+					<h2 style="margin-top:-20px;">Class 2</h2><br>
+					<ol>
+						<li>Chapter 1</li>
+						<li>Chapter 2</li>
+						<li>Chapter 3</li>
+						<li>Chapter 4</li>
+						<li>Chapter 5</li>
+						<li>Chapter 6</li>
+						<li>Chapter 7</li>
+						<li>Chapter 8</li>
+						<li>Chapter 9</li>
+						<li>Chapter 10</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<script>
+	
+	
+	
+	function go(a){
+		if(a==1){
+			$('.class1').removeClass('hidden');
+			$('.class2').addClass('hidden');
+		}else{
+			$('.class2').removeClass('hidden');
+			$('.class1').addClass('hidden');
+		}
+	}
+	</script>
+</body>
+</html>
