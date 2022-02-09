@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<style>
+
+body{
+background-image:url('../../../../img/yellow.jpg');
+background-attachment:fixed;
+}
+ 
+h2{
+text-align:center;
+background-color: #ffffff8f;
+font-family:roboto ;
+}
+h3{
+text-align:center;
+font-family:roboto ;
+background-color:#ffffff8f;
+}
+select{
+margin-top:10px;
+}
+img{
+width:100%;
+height:auto;
+}
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+	margin-left:30px;
+    background-color: #ffffff;
+	font-family:Comic Sans, Comic Sans MS, cursive;
+    padding: 14px 28px;
+    font-size: 26px;
+    cursor: pointer;
+    text-align: center;
+}
+.hidden{
+display:none;
+}
+.button {
+    position: relative;
+    background-color: #009b1f;
+    border: none;
+    font-size: 28px;
+	font-family: CAC Moose;
+	margin-left:44px;
+    color: #FFFFFF;
+    padding: 1px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button:after {
+    content: "";
+    background: #009b1f;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+
+}
+#dim{
+margin-top:10px;
+font-family:Comic Sans, Comic Sans MS, cursive;
+font-size:20px;
+
+}
+@media only screen and (max-device-width: 480px) {
+      img{
+	  height:auto;
+	  width:100%;
+	  margin-top:50px;
+	  }
+	  #dim{
+	  padding:0px;
+	  text-align:left;
+	  width:100%;
+	  font-size:24px;
+	   margin-top:40px;
+	   font-size:20px;
+	   
+	  }
+	  h2{
+	  margin-top:50px;
+	  }
+    }
+
+ @media only screen and (min-device-width: 481px) {
+       
+    }
+</style>
+  
+  </head>
+<body>
+
+<div class="tab1">
+<h2>SMART LANGUAGE</h2>
+<h3>Click on the correct place words.</h3>
+<br>
+
+<div class="container">
+	<div class="row" id="dim">
+	
+	<div class="col-sm-10"  >
+	1.&nbsp; The basket is <span id="mon1" onclick="mon1()">under</span>/<span id="happy1" onclick="happy1()">in</span> the table. <hr class="dashed">
+	</div>
+	</div>
+	
+	<div class="row" id="dim" >
+	
+	<div class="col-sm-10"  >
+	2.&nbsp; We keep clothes <span id="mon2" onclick="mon2()">in</span>/<span id="happy2" onclick="happy2()">behind</span> the cupboard. <hr class="dashed">
+	</div>
+	</div>
+	<div class="row" id="dim"  >
+	
+	<div class="col-sm-10"  >
+	3.&nbsp; The boy hid <span id="happy3" onclick="happy3()">in</span>/<span id="mon3" onclick="mon3()" >behind</span> the sofa. <hr class="dashed">
+	</div>
+	</div>
+	<div class="row" id="dim"  >
+	
+	<div class="col-sm-10"  >
+	4.&nbsp; Come and sit <span id="happy4" onclick="happy4()" >on</span>/<span id="mon4" onclick="mon4()" >near</span> me.<hr class="dashed">
+	
+	</div>
+	</div>
+	
+	<div class="row" id="dim"  >
+	
+	<div class="col-sm-10"  >
+	5.&nbsp; The cat is sitting <span id="mon5" onclick="mon5()">on</span>/<span id="happy5" onclick="happy5()">in</span> the mat.  <hr class="dashed">
+	
+	</div>
+	</div>
+	
+	<div class="row" id="dim"  >
+	
+	<div class="col-sm-10"  >
+	6.&nbsp; There is some water <span id="mon6" onclick="mon6()">in</span>/<span id="happy6" onclick="happy6()">on</span> this jug.  <hr class="dashed">
+	
+	</div>
+	</div>
+	<div class="row" id="dim"  >
+	
+	<div class="col-sm-10"  >
+	7.&nbsp; Susan dropped the pencil, and found it <span id="happy7" onclick="happy7()">on</span>/<span id="mon7" onclick="mon7()" >under</span> the table. <hr class="dashed">
+	</div>
+	</div>
+	
+	<br>
+	
+	<div class="row" >
+	<div class="col-sm-4">
+	<button class="button"   onclick="ho()"><span>Reset </span></button>
+	</div>
+	
+	<div class="col-sm-4">
+	<button class="button" onclick="go()" ><span>Submit </span></button>
+	</div>
+
+	<div class="col-sm-4">
+	<button class="button" onclick="show()"><span>Answer Key </span></button>
+	</div>
+	</div>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="tab4 hidden">
+<img src="../../../../english/Welldone.gif" width="100%" height="auto">
+</div>
+<audio id="audio2" src="../../../../english/try-again.mp3"></audio>
+<audio id="audio1" src="../../../../english/well-done.mp3"></audio>
+
+
+<script>
+var count = 0;
+function ho() {
+ 
+window.location="index.html"
+}
+function mon1() {
+	$('#mon1').css("background-color", "green");
+	$('#mon1').css("color", "white");
+	count++;
+}
+function mon2() {
+	$('#mon2').css("background-color", "green");count++;
+	$('#mon2').css("color", "white");
+}
+function mon3() {
+	$('#mon3').css("background-color", "green");count++;
+	$('#mon3').css("color", "white");
+}
+function mon4() {
+	$('#mon4').css("background-color", "green");count++;
+	$('#mon4').css("color", "white");
+}
+function mon5() {
+	$('#mon5').css("background-color", "green");count++;
+	$('#mon5').css("color", "white");
+}
+function mon6() {
+	$('#mon6').css("background-color", "green");count++;
+	$('#mon6').css("color", "white");
+}
+function mon7() {
+	$('#mon7').css("background-color", "green");count++;
+	$('#mon7').css("color", "white");
+}
+function happy1() {
+	$('#happy1').css("background-color", "red");
+}
+function happy2() {
+	$('#happy2').css("background-color", "red");
+}
+function happy3() {
+	$('#happy3').css("background-color", "red");
+}
+function happy4() {
+	$('#happy4').css("background-color", "red");
+}
+function happy5() {
+	$('#happy5').css("background-color", "red");
+}
+function happy6() {
+	$('#happy6').css("background-color", "red");
+}
+function happy7() {
+	$('#happy7').css("background-color", "red");
+}
+function show() {
+$('#mon1').css("background-color", "green");
+$('#mon1').css("color", "white");
+$('#mon2').css("background-color", "green");
+$('#mon2').css("color", "white");
+$('#mon3').css("background-color", "green");
+$('#mon3').css("color", "white");
+$('#mon4').css("background-color", "green");
+$('#mon4').css("color", "white");
+$('#mon5').css("background-color", "green");
+$('#mon5').css("color", "white");
+$('#mon6').css("background-color", "green");
+$('#mon6').css("color", "white");
+$('#mon7').css("background-color", "green");
+$('#mon7').css("color", "white");
+$('#happy1').css("background-color", "red");
+$('#happy2').css("background-color", "red");
+$('#happy3').css("background-color", "red");
+$('#happy4').css("background-color", "red");
+$('#happy5').css("background-color", "red");
+$('#happy6').css("background-color", "red");
+$('#happy7').css("background-color", "red");
+}
+function go() {
+if(count>=7){
+ $('.tab1').addClass('hidden')
+	   $('.tab4').removeClass('hidden')
+	   var audio = document.getElementById("audio1");
+       audio.play();
+}
+else{
+var audio = document.getElementById("audio2");
+       audio.play();
+}
+}
+
+</script>
+
+
+</body>
+</html>

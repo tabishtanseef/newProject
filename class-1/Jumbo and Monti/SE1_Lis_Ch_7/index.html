@@ -1,0 +1,652 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<style>
+
+body{
+background-image:url('../../../../img/yellow.jpg');
+background-attachment:fixed;
+}
+ 
+ 
+h4{
+ color:blue;
+ text-align:center;
+ font-family:roboto medium, arial;
+ }
+
+h3{
+
+ padding:40px;
+background-color: #ffffff8f;
+font-family:roboto medium, arial;
+
+ }
+ 
+h2{
+ padding:10px;
+text-align:center;
+background-color: #ffffff8f;
+font-family:dimbo;
+}
+select{
+margin-top:10px;
+}
+.block {
+    display: block;
+    width: 60%;
+    border: none;
+    background-color: #ffffff8f;
+	font-family:roboto medium, arial;
+    padding: 14px 28px;
+    font-size: 26px;
+    cursor: pointer;
+    text-align: center;
+}
+.hidden{
+display:none;
+}
+#dim{
+margin-top:10px;
+}
+audio{
+
+margin:30px;
+}
+@media only screen and (max-device-width: 480px) {
+      img{
+	  height:auto;
+	  width:100%;
+	  margin-top:50px;
+	  }
+	  #dim{
+	  width:100%;
+	   margin-top:40px;
+	  }
+    }
+
+ @media only screen and (min-device-width: 481px) {
+       img{
+	  height:auto;
+	  }
+    }
+</style>
+  
+  </head>
+<body>
+<center>
+<h2>LISTENING CAREFULLY</h2>
+
+<div id="pk">
+<div class="aaa hidden">
+
+<h2 >Listen very carefully and click on the correct answers.</h2>
+</div>
+<br>
+
+<div class="ss" >
+
+<center><audio id="bb" src="audio/1.mp3" controls></audio></center>
+<div class="container" id="hoho">
+<h3>Listen very carefully and click on the correct answers.</h3>
+</div>
+</div>
+</div>
+
+
+
+<div class="pks hidden" >
+
+<div class="tab1 ">
+<div class="container">
+
+<br><h4>Who is Jumbo? </h4><br>
+		<div class="row" id="dim" >
+	<div class="col-sm-12">
+	<button type="button" class="block" id="correct1" onclick="correct1()">baby elephant</button>
+	</div>
+	</div>
+
+	<div class="row" id="dim"  >
+	<div class="col-md-12">
+	<button type="button" class="block" id="wrong1" onclick="wrong1()">monkey</button>
+	</div>
+	</div>
+	
+</div>
+</div>
+</div>
+
+<div class="extra">
+<div class="tab2 hidden">
+<div class="container">
+<br><h4>Who cannot climb a tree? </h4><br>
+	<div class="row" id="dim"  >
+	<div class="col-md-12">
+	<button type="button" class="block" id="wrong4" onclick="wrong4()">Jumbo</button>
+	</div>
+	</div>
+	<div class="row" id="dim"  >
+	<div class="col-md-12">
+	<button type="button" class="block" id="correct2" onclick="correct2()">Monti </button>
+	</div>
+	</div>
+</div>
+</div>
+</div>
+
+<div class="extra2">
+<div class="tab3 hidden">
+<div class="container">
+<br><h4>Who cannot chatter? </h4><br>
+	<div class="row" id="dim"  >
+	<div class="col-md-12">
+	<button type="button" class="block" id="correct3" onclick="correct3()">Jumbo</button>
+	</div>
+	</div>
+		<div class="row" id="dim"  >
+	<div class="col-md-12">
+	<button type="button" class="block" id="wrong5" onclick="wrong5()">Monti</button>
+	</div>
+	</div>
+
+</div>
+</div>
+</div>
+<div class="extra3">
+<div class="tab4 hidden">
+<div class="container">
+<br><h4>Who has a long tail?</h4><br>
+	<div class="row" id="dim"  >
+	<div class="col-md-12">
+	<button type="button" class="block" id="correct4" onclick="correct4()">Monti </button>
+	</div>
+	</div>
+
+	<div class="row" id="dim" >
+	<div class="col-sm-12">
+	<button type="button" class="block" id="wrong7" onclick="wrong7()">Jumbo</button>
+	</div>
+	</div>
+</div>
+</div>
+</div>
+<div class="extra4">
+<div class="tab5 hidden">
+<div class="container">
+<br><h4>Who can swing on trees? </h4><br>
+	<div class="row" id="dim"  >
+	<div class="col-md-12">
+	<button type="button" class="block" id="wrong9" onclick="wrong9()">Jumbo</button>
+	</div>
+	</div>
+
+	<div class="row" id="dim" >
+	<div class="col-sm-12">
+	<button type="button" class="block" id="correct5" onclick="correct5()" >Monti </button>
+	</div>
+	</div>
+</div>
+</div>
+</div>
+
+<div class="extra5">
+<div class="tab6 hidden">
+<div class="container">
+<br><h4>Who has a long  trunk?</h4><br>
+	<div class="row" id="dim" >
+	<div class="col-sm-12">
+	<button type="button" class="block" id="correct6" onclick="correct6()" >Jumbo</button>
+	</div>
+	</div>
+
+		<div class="row" id="dim"  >
+	<div class="col-md-12">
+	<button type="button" class="block" id="wrong11" onclick="wrong11()">Monti </button>
+	</div>
+	</div>
+
+
+</div>
+</div>
+</div>
+
+<div class="extra6">
+<div class="tab77 hidden">
+<div class="container">
+	<div class="row" >
+	<div class="col-md-12">
+<h4> The running area is called the running strip. </h4>
+<br>	
+	</div>
+	</div>
+
+	<div class="row" id="dim" >
+	<div class="col-sm-12">
+	<button type="button" class="block" id="correct7" onclick="correct7()" >False</button>
+	</div>
+	</div>
+	<div class="row" id="dim"  >
+	<div class="col-md-12">
+	<button type="button" class="block" id="wrong12" onclick="wrong12()">True</button>
+	</div>
+	</div>
+
+</div>
+</div>
+</div>
+<div class="extra7">
+<div class="tab8 hidden">
+<div class="container">
+	<div class="row" >
+	<div class="col-md-12">
+<h4>The result depends upon the longest single legal throw.</h4>
+<br>	
+	</div>
+	</div>
+	<div class="row" id="dim" >
+	<div class="col-sm-12">
+	<button type="button" class="block" id="correct8" onclick="correct8()" >True</button>
+	</div>
+	</div>
+	
+	<div class="row" id="dim"  >
+	<div class="col-md-12">
+	<button type="button" class="block" id="wrong13" onclick="wrong13()">False</button>
+	</div>
+	</div>
+
+
+
+</div>
+</div>
+</div>
+<div class="extra8">
+<div class="tab99 hidden">
+<div class="container">
+	<div class="row" >
+	<div class="col-md-12">
+	<audio src="audio/9.mp3" controls></audio>
+	</div>
+	</div>
+		<div class="row" id="dim"  >
+	<div class="col-md-12">
+	<button type="button" class="block" id="wrong14" onclick="wrong14()">True</button>
+	</div>
+	</div>
+
+	<div class="row" id="dim" >
+	<div class="col-sm-12">
+	<button type="button" class="block" id="correct9" onclick="correct9()" >False</button>
+	</div>
+	</div>
+
+</div>
+</div>
+</div>
+
+
+<div class="tab7 hidden">
+<div class="container">
+	<div class="row" id="dim"  >
+	<div class="col-md-12">
+	<img  height="auto" width="100%"  src="../../../../english/Welldone.gif">
+	</div>
+	</div>
+</div>
+</div>
+<audio id="audio2" src="../../../../english/try-again.mp3"></audio>
+<audio id="audio1" src="audio/2.mp3"></audio>
+<audio id="audio3" src="audio/3.mp3"></audio>
+<audio id="audio4" src="audio/4.mp3"></audio>
+<audio id="audio5" src="audio/5.mp3"></audio>
+<audio id="audio6" src="audio/6.mp3"></audio>
+<audio id="audio7" src="../../../../english/well-done.mp3"></audio>
+</center>
+
+
+<script>
+
+
+function updateCurrentTime() 
+    {
+        var song = document.querySelector('#bb');
+        var currentTime = Math.floor(song.currentTime);
+        
+        var duration = Math.floor(song.duration);
+       
+       console.log(currentTime);
+        console.log(duration);
+		
+		if(currentTime==4){
+ $('.aaa').removeClass('hidden')
+ $('.pks').removeClass('hidden')
+ $('.ss').addClass('hidden')
+
+
+}
+		
+    }
+
+window.onload = function()
+    {  updateCurrentTime();
+      setInterval(function()
+        {
+            updateCurrentTime();
+        },1000);
+    }
+
+
+
+
+
+
+
+function correct1() {
+ var a1 = document.getElementById("correct1");
+ var a2 = document.getElementById("wrong1");
+ 
+ a1.style.backgroundColor = "#00FF00"
+ a2.style.backgroundColor = "#ffffff8f"
+
+ var audio = document.getElementById("audio1");
+       audio.play();
+	   var audio = document.getElementById("bb");
+       audio.pause();
+	   var audio = document.getElementById("audio2");
+       audio.pause();
+setInterval(function(){ $('.tab1').addClass('hidden')
+	   $('.tab2').removeClass('hidden')},300);
+      
+	   
+}
+function wrong1() {
+ var a1 = document.getElementById("correct1");
+ var a2 = document.getElementById("wrong1");
+
+ a1.style.backgroundColor = "#ffffff8f"
+ a2.style.backgroundColor = "#ff0000"
+
+ var audio = document.getElementById("audio2");
+       audio.play();
+}
+function wrong2() {
+ var a1 = document.getElementById("correct1");
+ var a2 = document.getElementById("wrong1");
+ var a3 = document.getElementById("wrong2");
+ a1.style.backgroundColor = "#ffffff8f"
+ a3.style.backgroundColor = "#ff0000"
+ a2.style.backgroundColor = "#ffffff8f"
+ var audio = document.getElementById("audio2");
+       audio.play();
+}
+function correct2() {
+ var a1 = document.getElementById("correct2");
+ 
+ var a3 = document.getElementById("wrong4");
+ a1.style.backgroundColor = "#00FF00"
+ 
+ a3.style.backgroundColor = "#ffffff8f"
+ var audio = document.getElementById("audio3");
+       audio.play();
+	   var audio = document.getElementById("audio1");
+       audio.pause();
+	   var audio = document.getElementById("audio2");
+       audio.pause();
+setInterval(function(){ $('.extra').addClass('hidden')
+	   $('.tab3').removeClass('hidden')},300);
+}
+function wrong3() {
+ var a1 = document.getElementById("correct2");
+ var a2 = document.getElementById("wrong3");
+ var a3 = document.getElementById("wrong4");
+ a1.style.backgroundColor = "#ffffff8f"
+ a2.style.backgroundColor = "#ff0000"
+ a3.style.backgroundColor = "#ffffff8f"
+ var audio = document.getElementById("audio2");
+       audio.play();
+}
+function wrong4() {
+ var a1 = document.getElementById("correct2");
+ var a2 = document.getElementById("wrong3");
+ var a3 = document.getElementById("wrong4");
+ a1.style.backgroundColor = "#ffffff8f"
+ a3.style.backgroundColor = "#ff0000"
+ 
+ var audio = document.getElementById("audio2");
+       audio.play();
+}
+
+function correct3() {
+ var a1 = document.getElementById("correct3");
+ var a2 = document.getElementById("wrong5");
+ var a3 = document.getElementById("wrong6");
+ a1.style.backgroundColor = "#00FF00"
+ a2.style.backgroundColor = "#ffffff8f"
+ 
+ var audio = document.getElementById("audio4");
+       audio.play();
+	   var audio = document.getElementById("audio3");
+       audio.pause();
+	   var audio = document.getElementById("audio2");
+       audio.pause();
+setInterval(function(){ $('.extra2').addClass('hidden')
+	   $('.tab4').removeClass('hidden')},300);
+}
+function wrong5() {
+ var a1 = document.getElementById("correct3");
+ var a2 = document.getElementById("wrong5");
+ var a3 = document.getElementById("wrong6");
+ a1.style.backgroundColor = "#ffffff8f"
+ a2.style.backgroundColor = "#ff0000"
+ 
+ var audio = document.getElementById("audio2");
+       audio.play();
+}
+function wrong6() {
+ var a1 = document.getElementById("correct3");
+ var a2 = document.getElementById("wrong5");
+ var a3 = document.getElementById("wrong6");
+ a1.style.backgroundColor = "#ffffff8f"
+ a3.style.backgroundColor = "#ff0000"
+ a2.style.backgroundColor = "#ffffff8f"
+ var audio = document.getElementById("audio2");
+       audio.play();
+}
+function correct4() {
+ var a1 = document.getElementById("correct4");
+ var a2 = document.getElementById("wrong7");
+ 
+ a1.style.backgroundColor = "#00FF00"
+ a2.style.backgroundColor = "#ffffff8f"
+ 
+ var audio = document.getElementById("audio5");
+       audio.play();
+	   var audio = document.getElementById("audio4");
+       audio.pause();
+	   var audio = document.getElementById("audio2");
+       audio.pause();
+setInterval(function(){ $('.extra3').addClass('hidden')
+	   $('.tab5').removeClass('hidden')},300);
+}
+function wrong7() {
+ var a1 = document.getElementById("correct3");
+ var a2 = document.getElementById("wrong7");
+ 
+ a1.style.backgroundColor = "#ffffff8f"
+ a2.style.backgroundColor = "#ff0000"
+ 
+ var audio = document.getElementById("audio2");
+       audio.play();
+
+}
+function wrong8() {
+ var a1 = document.getElementById("correct3");
+ var a2 = document.getElementById("wrong7");
+ a1.style.backgroundColor = "#00FF00"
+ a2.style.backgroundColor = "#ffffff8f"
+ 
+ var audio = document.getElementById("audio2");
+       audio.play();
+
+}
+function correct5() {
+ var a1 = document.getElementById("correct5");
+ var a2 = document.getElementById("wrong9");
+ 
+ a1.style.backgroundColor = "#00FF00"
+ a2.style.backgroundColor = "#ffffff8f"
+ var audio = document.getElementById("audio6");
+       audio.play();
+	   var audio = document.getElementById("audio5");
+       audio.pause();
+	   var audio = document.getElementById("audio2");
+       audio.pause();
+setInterval(function(){ $('.extra4').addClass('hidden')
+
+	   $('.tab6').removeClass('hidden')},300);
+}
+function wrong9() {
+ var a1 = document.getElementById("correct5");
+ var a2 = document.getElementById("wrong9");
+ 
+ a1.style.backgroundColor = "#ffffff8f"
+ a2.style.backgroundColor = "#ff0000"
+
+ var audio = document.getElementById("audio2");
+       audio.play();
+
+}
+function wrong10() {
+ var a1 = document.getElementById("correct5");
+ var a2 = document.getElementById("wrong9");
+ var a3 = document.getElementById("wrong10");
+ a1.style.backgroundColor = "#00FF00"
+ a2.style.backgroundColor = "#ffffff8f"
+ a3.style.backgroundColor = "#ffffff8f"
+ var audio = document.getElementById("audio2");
+       audio.play();
+
+}
+function correct6() {
+ var a1 = document.getElementById("correct6");
+ var a2 = document.getElementById("wrong11");
+ 
+ a1.style.backgroundColor = "#00FF00"
+ a2.style.backgroundColor = "#ffffff8f"
+ 
+ var audio = document.getElementById("audio7");
+       audio.play();
+	   var audio = document.getElementById("audio6");
+       audio.pause();
+	   var audio = document.getElementById("audio2");
+       audio.pause();
+setInterval(function(){ $('.extra5').addClass('hidden')
+$('h2').addClass('hidden')
+	   $('.tab7').removeClass('hidden')},1000);
+}
+function wrong11() {
+ var a1 = document.getElementById("correct6");
+ var a2 = document.getElementById("wrong11");
+ 
+ a1.style.backgroundColor = "#ffffff8f"
+ a2.style.backgroundColor = "#ff0000"
+ 
+ var audio = document.getElementById("audio2");
+       audio.play();
+
+}
+
+
+
+function correct7() {
+ var a1 = document.getElementById("correct7");
+ var a2 = document.getElementById("wrong12");
+ 
+ a1.style.backgroundColor = "#00FF00"
+ a2.style.backgroundColor = "#ffffff8f"
+ var audio = document.getElementById("audio1");
+       audio.play();
+setInterval(function(){ $('.extra6').addClass('hidden')
+	   $('.tab8').removeClass('hidden')},2000);
+}
+function wrong12() {
+ var a1 = document.getElementById("correct7");
+ var a2 = document.getElementById("wrong12");
+ 
+ a1.style.backgroundColor = "#ffffff8f"
+ a2.style.backgroundColor = "#ff0000"
+
+ var audio = document.getElementById("audio2");
+       audio.play();
+
+}
+
+
+
+
+function correct8() {
+ var a1 = document.getElementById("correct8");
+ var a2 = document.getElementById("wrong13");
+ 
+ a1.style.backgroundColor = "#00FF00"
+ a2.style.backgroundColor = "#ffffff8f"
+ var audio = document.getElementById("audio1");
+       audio.play();
+setInterval(function(){ $('.extra7').addClass('hidden')
+$('h2').addClass('hidden')
+	   $('.tab9').removeClass('hidden')},2000);
+}
+function wrong13() {
+ var a1 = document.getElementById("correct8");
+ var a2 = document.getElementById("wrong13");
+ 
+ a1.style.backgroundColor = "#ffffff8f"
+ a2.style.backgroundColor = "#ff0000"
+
+ var audio = document.getElementById("audio2");
+       audio.play();
+
+}
+
+
+
+
+function correct9() {
+ var a1 = document.getElementById("correct9");
+ var a2 = document.getElementById("wrong14");
+ 
+ a1.style.backgroundColor = "#00FF00"
+ a2.style.backgroundColor = "#ffffff8f"
+ var audio = document.getElementById("audio1");
+       audio.play();
+setInterval(function(){ $('.extra8').addClass('hidden')
+
+$('h2').addClass('hidden')
+
+	   $('.tab10').removeClass('hidden')},2000);
+}
+function wrong14() {
+ var a1 = document.getElementById("correct9");
+ var a2 = document.getElementById("wrong14");
+ 
+ a1.style.backgroundColor = "#ffffff8f"
+ a2.style.backgroundColor = "#ff0000"
+
+ var audio = document.getElementById("audio2");
+       audio.play();
+
+}
+
+
+</script>
+
+</body>
+</html>

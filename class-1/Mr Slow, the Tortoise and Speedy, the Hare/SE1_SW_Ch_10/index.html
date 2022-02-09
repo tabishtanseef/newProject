@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<style>
+
+body{
+background-image:url('../../../../img/yellow.jpg');
+background-attachment:fixed;
+}
+
+h2, h3{
+background-color:#ffffff8f;
+color:black;
+text-align:center;
+padding:8px;
+font-family:Nexa;
+}
+h4{
+text-align:center;
+font-family:Nexa;
+font-size:40px;
+}
+.bur{
+border-radius:20px;
+}
+.hidden{
+display:none;
+}
+
+.row{
+text-align:center;
+border:2px solid orange;
+padding:10px;
+margin:20px;
+border-radius:20px;
+background-color:#ffffff8f;
+}
+#gau, #gau1, #gau2, #gau3, #gau4, #gau5, #gau6, #gau7, #gau8, #gau9 {
+margin-top:20px;
+font-size:30px;
+border-radius:50%;
+
+}
+span{
+border-radius:50%;
+}
+</style>
+
+
+</head>
+<body>
+<h2>SPELL WELL</h2>
+<h3>Click on the correctly spelt word in each row.</h3>
+
+<div class="container tab1">
+
+<br>
+<div class="row">
+	<div class="col-sm-2" id="gau">
+	<span style="color:red;">(A)</span>
+	</div>
+	
+	
+	<div class="col-sm-2" id="gau">	
+	rabit
+	</div>
+	
+	<div class="col-sm-2" id="gau">	
+	rabitt
+	</div>
+	
+	<div class="col-sm-2 gg"  id="gau1" onclick="go(1)">	
+	<span id="2" style="padding-bottom:10px;">&nbsp;rabbit&nbsp;</span>
+	</div>
+	
+	<div class="col-sm-2" id="gau">	
+	rabbitt
+	</div>	
+	</div>
+<hr>
+
+<div class="row">
+	<div class="col-sm-2" id="gau">
+	<span style="color:red;">(B)</span>
+	</div>
+	
+	<div class="col-sm-2" id="gau2" onclick="go(2)">	
+	<span id="2" style="padding-bottom:10px;">&nbsp;jungle&nbsp;</span>
+	</div>
+	
+	<div class="col-sm-2" id="gau">	
+	jungil
+	</div>
+	
+	<div class="col-sm-2" id="gau">	
+	jangle
+	</div>	
+	
+	<div class="col-sm-2" id="gau">	
+	jungel
+	</div>	
+	</div>
+<hr>
+
+<div class="row">
+	<div class="col-sm-2" id="gau">
+	<span style="color:red;">(C)</span>
+	</div>
+	
+	<div class="col-sm-2" id="gau">	
+	lazi	
+	</div>
+	
+	<div class="col-sm-2" id="gau">	
+	lazee
+	</div>
+	
+	<div class="col-sm-2" id="gau3" onclick="go(3)">	
+	<span id="2" style="padding-bottom:10px;">&nbsp;lazy&nbsp;</span>
+	</div>
+	
+	<div class="col-sm-2" id="gau">	
+	lazzy
+	</div>	
+	</div>
+<hr>
+
+
+<div class="row">
+	<div class="col-sm-2" id="gau">
+	<span style="color:red;">(D)</span>
+	</div>
+	
+	<div class="col-sm-2" id="gau4" onclick="go(4)">	
+	<span id="2" style="padding-bottom:10px;">&nbsp;surprise&nbsp;</span>
+	</div>
+	
+	<div class="col-sm-2" id="gau">	
+	suprise
+	</div>
+	
+	<div class="col-sm-2" id="gau">	
+	supprise
+	</div>	
+	
+	<div class="col-sm-2" id="gau">	
+	saprise
+	</div>	
+	</div>
+
+<hr>
+</div>
+
+
+
+<div class="tab hidden">
+	<center><img height="auto" width="100%"  src="../../../../english/Welldone.gif" ></center>
+</div>
+
+<audio src="../../../../english/try-again.mp3" id="audio2"></audio>
+<audio src="../../../../english/well-done.mp3" id="audio1"></audio>
+</body>
+<script>
+var count =0;
+function go(a){
+$('#gau'+a).css('border',"2px red dashed");
+ var audio = document.getElementById("audio1");
+       audio.play();
+count++;
+if (count==4){
+setInterval(function(){ $('.tab1').addClass('hidden')
+$('h2').addClass('hidden')
+$('h3').addClass('hidden')
+$('h4').addClass('hidden')
+	   $('.tab').removeClass('hidden')},1000);
+}
+     } 
+
+</script>
+
+</html>

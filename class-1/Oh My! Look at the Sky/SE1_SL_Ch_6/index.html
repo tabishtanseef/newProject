@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<style>
+
+body{
+background-image:url('../../../../img/b1.png');
+background-attachment:fixed;
+background-size:cover;
+}
+
+h2{
+text-align:center;
+background-color: #ffffff8f;
+font-family:roboto ;
+}
+h3{
+text-align:center;
+font-family:roboto ;
+background-color: #ffffff8f;
+
+}
+select{
+margin-top:10px;
+}
+img{
+width:100%;
+height:auto;
+}
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+	margin-left:30px;
+    background-color: #ffffff;
+	font-family:Comic Sans, Comic Sans MS, cursive;
+    padding: 14px 28px;
+    font-size: 26px;
+    cursor: pointer;
+    text-align: center;
+}
+.hidden{
+display:none;
+}
+.button {
+    position: relative;
+    background-color: #ffffff8f;
+    border: none;
+    font-size: 28px;
+	font-family: CAC Moose;
+	margin-left:44px;
+    padding: 1px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button:after {
+    content: "";
+    background-color: #ffffff8f;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+
+}
+#dim{
+margin-top:10px;
+font-family:Comic Sans, Comic Sans MS, cursive;
+font-size:20px;
+
+}
+@media only screen and (max-device-width: 480px) {
+      img{
+	  height:auto;
+	  width:100%;
+	  margin-top:50px;
+	  }
+	  #dim{
+	  padding:0px;
+	  text-align:left;
+	  width:100%;
+	  font-size:24px;
+	   margin-top:40px;
+	   font-size:20px;
+	   
+	  }
+	  h2{
+	  margin-top:50px;
+	  }
+    }
+
+ @media only screen and (min-device-width: 481px) {
+       
+    }
+</style>
+  
+  </head>
+<body>
+
+<div class="tab1">
+<h2>SMART LANGUAGE</h2>
+<h3>Click on the correct describing words.</h3>
+<br>
+<br>
+<br>
+<div class="container">
+	<div class="row" id="dim">
+	
+	<div class="col-sm-10"  >
+	1.&nbsp; The grass is <span id="mon1" onclick="mon1()">green</span>/<span id="happy1" onclick="happy1()">red</span>. <hr class="dashed">
+	</div>
+	</div>
+	
+	<div class="row" id="dim" >
+	
+	<div class="col-sm-10"  >
+	2.&nbsp; The sun is <span id="mon2" onclick="mon2()">hot</span>/<span id="happy2" onclick="happy2()">cold</span>. <hr class="dashed">
+	</div>
+	</div>
+	<div class="row" id="dim"  >
+	
+	<div class="col-sm-10"  >
+	3.&nbsp; Monkeys have <span id="happy3" onclick="happy3()">short</span>/<span id="mon3" onclick="mon3()" >long</span> tails. <hr class="dashed">
+	</div>
+	</div>
+	<div class="row" id="dim"  >
+	
+	<div class="col-sm-10"  >
+	4.&nbsp; Elephants are <span id="happy4" onclick="happy4()" >small</span>/<span id="mon4" onclick="mon4()" >big</span> animals.<hr class="dashed">
+	
+	</div>
+	</div>
+	
+	<div class="row" id="dim"  >
+	
+	<div class="col-sm-10"  >
+	5.&nbsp; The sky is <span id="mon5" onclick="mon5()">blue</span>/<span id="happy5" onclick="happy5()">green</span>.  <hr class="dashed">
+	
+	</div>
+	</div>
+	
+	<div class="row" >
+	<div class="col-sm-4">
+	<button class="button"   onclick="ho()"><span>Reset </span></button>
+	</div>
+	
+	<div class="col-sm-4">
+	<button class="button" onclick="go()" ><span>Submit </span></button>
+	</div>
+
+	<div class="col-sm-4">
+	<button class="button" onclick="show()"><span>Answer Key </span></button>
+	</div>
+	</div>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="tab4 hidden">
+<img src="../../../../english/Welldone.gif" height="auto" width="100%">
+</div>
+<audio id="audio2" src="../../../../english/try-again.mp3"></audio>
+<audio id="audio1" src="../../../../english/well-done.mp3"></audio>
+
+
+<script>
+var count = 0;
+function ho() {
+ 
+window.location="index.html"
+}
+function mon1() {
+	$('#mon1').css("background-color", "green");
+	$('#mon1').css("color", "white");
+	count++;
+}
+function mon2() {
+	$('#mon2').css("background-color", "green");count++;
+	$('#mon2').css("color", "white");
+}
+function mon3() {
+	$('#mon3').css("background-color", "green");count++;
+	$('#mon3').css("color", "white");
+}
+function mon4() {
+	$('#mon4').css("background-color", "green");count++;
+	$('#mon4').css("color", "white");
+}
+function mon5() {
+	$('#mon5').css("background-color", "green");count++;
+	$('#mon5').css("color", "white");
+}
+function happy1() {
+	$('#happy1').css("background-color", "red");
+}
+function happy2() {
+	$('#happy2').css("background-color", "red");
+}
+function happy3() {
+	$('#happy3').css("background-color", "red");
+}
+function happy4() {
+	$('#happy4').css("background-color", "red");
+}
+function happy5() {
+	$('#happy5').css("background-color", "red");
+}
+function show() {
+$('#mon1').css("background-color", "green");
+$('#mon1').css("color", "white");
+$('#mon2').css("background-color", "green");
+$('#mon2').css("color", "white");
+$('#mon3').css("background-color", "green");
+$('#mon3').css("color", "white");
+$('#mon4').css("background-color", "green");
+$('#mon4').css("color", "white");
+$('#mon5').css("background-color", "green");
+$('#mon5').css("color", "white");
+$('#happy1').css("background-color", "red");
+$('#happy2').css("background-color", "red");
+$('#happy3').css("background-color", "red");
+$('#happy4').css("background-color", "red");
+$('#happy5').css("background-color", "red");
+}
+function go() {
+if(count>=5){
+ $('.tab1').addClass('hidden')
+	   $('.tab4').removeClass('hidden')
+	   var audio = document.getElementById("audio1");
+       audio.play();
+}
+else{
+var audio = document.getElementById("audio2");
+       audio.play();
+}
+}
+
+</script>
+
+
+</body>
+</html>

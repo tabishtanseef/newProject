@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<style>
+
+body{
+background-image:url('../../../../img/yellow.jpg');
+background-attachment:fixed;
+
+}
+ 
+h2{
+ padding:10px;
+text-align:center;
+background-color:#ffffff8f;
+font-family:roboto condensed, cursive;
+}
+h3{
+margin-top:50px;
+background-color:#ffffff8f;
+padding:10px;
+font-weight:bold;
+}
+select{
+margin-top:10px;
+}
+.block {
+    display: block;
+    width: 60%;
+    border: none;
+	margin-top:10px;
+    background-color: #ffffff8f;
+	font-family:Comic Sans, Comic Sans MS, cursive;
+    padding: 14px 28px;
+    font-size: 26px;
+    cursor: pointer;
+    text-align: center;
+}
+.hidden{
+display:none;
+}
+#bac{
+color:#FF0000; 
+font-weight:bold; 
+font-family:ZapfDingbats BT;
+ text-shadow: 2px 2px #000; 
+ margin-left:20px;
+}
+#dim{
+margin-top:10px;
+text-align:left;
+font-family: roboto;
+font-size:20px;
+}
+input{
+text-align:center;
+font-weight:bold;
+}
+audio{
+
+margin:30px;
+}
+@media only screen and (max-device-width: 480px) {
+      
+	  #crow{
+margin-top: 70%;
+}
+	  #dim{
+	  width:100%;
+	   margin-top:40px;
+	  }
+    }
+
+ @media only screen and (min-device-width: 481px) {
+     
+    }
+</style>
+  
+  </head>
+<body>
+<h2>SMART LANGUAGE</h2>
+<center>
+<h3 style="background-color:#ffffff9f; margin-top:20px;">Choose 'This' or 'These' for each sentence.</h3>
+
+<br>
+<br>
+<div class="tab1">
+<div class="container">
+	
+	<div class="row" id="dim"  >
+	
+	<div class="col-md-4">
+	1.&nbsp; <select id="a1"><option disabled selected></option><option>This</option><option>These</option></select> is a bag.<span id="bac" class="burp1 hidden"></span>
+	</div>
+	</div>
+	<hr>
+	<div class="row" id="dim"  >
+	
+	<div class="col-md-4">
+	2.&nbsp; <select id="a2"><option disabled selected></option><option>This</option><option>These</option></select> are phones.<span id="bac" class="burp2 hidden"></span>
+	</div>
+	</div>
+	<hr>
+	<div class="row" id="dim"  >
+	
+	<div class="col-md-4">
+	3.&nbsp; <select id="a3"><option disabled selected></option><option>This</option><option>These</option></select> are glasses.<span id="bac" class="burp3 hidden"></span>
+	</div>
+	</div>
+	<hr>
+	<div class="row" id="dim"  >
+	
+	<div class="col-md-4">
+	4.&nbsp; <select id="a4"><option disabled selected></option><option>This</option><option>These</option></select> is a pen.<span id="bac" class="burp4 hidden"></span>
+	</div>
+	</div>
+	
+	<hr>
+	
+	<div class="row" id="dim" >
+	<div class="col-sm-4">
+	<center><button class="block" onclick="window.location.reload()">Reset</button></center>
+	</div>
+	<div class="col-sm-4">
+	<center><button class="block" onclick="check()">Submit</button></center>
+	</div>
+	<div class="col-sm-4">
+	<center><button class="block" onclick="solve()">Answer key</button></center>	
+	</div>
+	</div>
+	
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="tab10 hidden">
+
+<div class="container">
+	<div class="row" id="dim"  >
+	<div class="col-md-12">
+	<img  height="auto" width="100%"  src="../../../../english/Welldone.gif">
+	</div>
+	</div>
+</div>
+</div>
+
+<audio id="audio2" src="../../../../english/try-again.mp3"></audio>
+<audio id="audio1" src="../../../../english/well-done.mp3"></audio>
+
+</center>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+function check() {
+ var a1 = document.getElementById("a1");
+ var a2 = document.getElementById("a2");
+ var a3 = document.getElementById("a3");
+ var a4 = document.getElementById("a4");
+var ans1= a1.options[a1.selectedIndex].text;
+var ans2= a2.options[a2.selectedIndex].text;
+var ans3= a3.options[a3.selectedIndex].text;
+var ans4= a4.options[a4.selectedIndex].text;
+
+if(ans1.toLowerCase()!="this"){
+$('.burp1').removeClass('hidden');
+$('#a1').css("border",'2px solid red');
+}
+if(ans2.toLowerCase()!="these"){
+$('.burp2').removeClass('hidden');
+$('#a2').css("border",'2px solid red');
+}
+if(ans3.toLowerCase()!="these"){
+$('.burp3').removeClass('hidden');
+$('#a3').css("border",'2px solid red');
+}
+if(ans4.toLowerCase()!="this"){
+$('.burp4').removeClass('hidden');
+$('#a4').css("border",'2px solid red');
+}
+if(ans1.toLowerCase()=="this" && ans2.toLowerCase()=="these" && ans3.toLowerCase()=="these" && ans4.toLowerCase()=="this" ){
+
+ var audio = document.getElementById("audio1");
+       audio.play();
+setInterval(function(){ $('.tab1').addClass('hidden')
+$('h2').addClass('hidden')
+$('h3').addClass('hidden')
+	   $('.tab10').removeClass('hidden')},1000);
+     } 
+	else{
+	var audio = document.getElementById("audio2");
+       audio.play();
+	}   
+	   
+	   
+}
+function solve() {
+$('#a1').val('This');
+$('#a2').val('These');
+$('#a3').val('These');
+$('#a4').val('This');
+
+}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<style>
+
+body{
+background-image:url('../../../../img/yellow.jpg');
+background-attachment:fixed;
+}
+
+h2{
+ padding:10px;
+text-align:center;
+background-color:#ffffff8f;
+font-family:roboto condensed, cursive;
+}
+h3{
+margin-top:50px;
+background-color:#ffffff8f;
+padding:10px;
+font-weight:bold;
+}
+select{
+margin-top:10px;
+}
+.block {
+    display: block;
+    width: 60%;
+    border: none;
+    background-color: #ffffff8f;
+	font-family:Comic Sans, Comic Sans MS, cursive;
+    padding: 14px 28px;
+    font-size: 26px;
+    cursor: pointer;
+    text-align: center;
+}
+.hidden{
+display:none;
+}
+#bac{
+color:#FF0000; 
+font-weight:bold; 
+font-family:ZapfDingbats BT;
+ text-shadow: 2px 2px #000; 
+ margin-left:20px;
+}
+#dim{
+
+margin-top:10px;
+text-align:left;
+font-family: roboto;
+font-size:20px;
+}
+input{
+text-align:center;
+font-weight:bold;
+}
+audio{
+
+margin:30px;
+}
+@media only screen and (max-device-width: 480px) {
+      
+	  #crow{
+margin-top: 70%;
+}
+	  #dim{
+	  width:100%;
+	   margin-top:40px;
+	  }
+    }
+
+ @media only screen and (min-device-width: 481px) {
+     
+    }
+</style>
+  
+  </head>
+<body>
+<h2>SMART LANGUAGE</h2>
+<center>
+<h3 style="background-color:#ffffff9f; margin-top:20px;">Click on the correct option.</h3>
+
+<br>
+<br>
+<div class="tab1">
+<div class="container">
+	
+	<div class="row" id="dim"  >
+	
+	<div class="col-md-10">
+	1.&nbsp; Look at the butterflies. They <select id="a1"><option disabled selected></option><option>is holding</option><option>are sitting</option><option>are eating</option><option>is keeping</option><option>is helping</option></select> on the flowers.<span id="bac" class="burp1 hidden"></span>
+	</div>
+	</div>
+	<hr>
+	<div class="row" id="dim"  >
+	
+	<div class="col-md-10">
+	2.&nbsp; Look at the conductor. He <select id="a2"><option disabled selected></option><option>is holding</option><option>are sitting</option><option>are eating</option><option>is keeping</option><option>is helping</option></select> the children get off the bus.<span id="bac" class="burp2 hidden"></span>
+	</div>
+	</div>
+	<hr>
+	<div class="row" id="dim"  >
+	
+	<div class="col-md-10">
+	3.&nbsp; Look at Miss Das. She <select id="a3"><option disabled selected></option><option>is holding</option><option>are sitting</option><option>are eating</option><option>is keeping</option><option>is helping</option></select> an umbrella.<span id="bac" class="burp3 hidden"></span>
+	</div>
+	</div>
+	<hr>
+	<div class="row" id="dim"  >
+	
+	<div class="col-md-10">
+	4.&nbsp; Look at the children. They <select id="a4"><option disabled selected></option><option>is holding</option><option>are sitting</option><option>are eating</option><option>is keeping</option><option>is helping</option></select> lunch.<span id="bac" class="burp4 hidden"></span>
+	</div>
+	</div>
+	
+	<hr>
+	<div class="row" id="dim"  >
+	
+	<div class="col-md-10">
+	5.&nbsp; Look at the bus conductor. He <select id="a5"><option disabled selected></option><option>is holding</option><option>are sitting</option><option>are eating</option><option>is keeping</option><option>is helping</option></select> a big basket on the grass.<span id="bac" class="burp5 hidden"></span>
+	</div>
+	</div>
+	
+	<hr>
+	<div class="row" id="dim" >
+	<div class="col-sm-4">
+	<center><button class="block" onclick="window.location.reload()">Reset</button></center>
+	</div>
+	<div class="col-sm-4">
+	<center><button class="block" onclick="check()">Submit</button></center>
+	</div>
+	<div class="col-sm-4">
+	<center><button class="block" onclick="solve()">Answer key</button></center>
+	</div>
+	</div>
+	
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="tab10 hidden">
+
+<div class="container">
+	<div class="row" id="dim"  >
+	<div class="col-md-12">
+	<img  height="auto" width="100%"  src="../../../../english/Welldone.gif">
+	</div>
+	</div>
+</div>
+</div>
+
+<audio id="audio2" src="../../../../english/try-again.mp3"></audio>
+<audio id="audio1" src="../../../../english/well-done.mp3"></audio>
+
+</center>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+function check() {
+ var a1 = document.getElementById("a1");
+ var a2 = document.getElementById("a2");
+ var a3 = document.getElementById("a3");
+ var a4 = document.getElementById("a4");
+ var a5 = document.getElementById("a5");
+var ans1= a1.options[a1.selectedIndex].text;
+var ans2= a2.options[a2.selectedIndex].text;
+var ans3= a3.options[a3.selectedIndex].text;
+var ans4= a4.options[a4.selectedIndex].text;
+var ans5= a5.options[a5.selectedIndex].text;
+
+if(ans1.toLowerCase()!="are sitting"){
+$('.burp1').removeClass('hidden');
+$('#a1').css("border",'2px solid red');
+}
+if(ans2.toLowerCase()!="is helping"){
+$('.burp2').removeClass('hidden');
+$('#a2').css("border",'2px solid red');
+}
+if(ans3.toLowerCase()!="is holding"){
+$('.burp3').removeClass('hidden');
+$('#a3').css("border",'2px solid red');
+}
+if(ans4.toLowerCase()!="are eating"){
+$('.burp4').removeClass('hidden');
+$('#a4').css("border",'2px solid red');
+}
+if(ans5.toLowerCase()!="is keeping"){
+$('.burp5').removeClass('hidden');
+$('#a5').css("border",'2px solid red');
+}
+if(ans1.toLowerCase()=="are sitting" && ans2.toLowerCase()=="is helping" && ans3.toLowerCase()=="is holding" && ans4.toLowerCase()=="are eating" && ans5=="is keeping" ){
+
+    var audio = document.getElementById("audio1");
+    audio.play();
+	setInterval(function(){ $('.tab1').addClass('hidden')
+	$('h2').addClass('hidden')
+	$('h3').addClass('hidden')
+	$('.tab10').removeClass('hidden')},1000);
+    } 
+	else{
+	var audio = document.getElementById("audio2");
+       audio.play();
+	}      
+}
+function solve() {
+$('#a1').val('are sitting');
+$('#a2').val('is helping');
+$('#a3').val('is holding');
+$('#a4').val('are eating');
+$('#a5').val('is keeping');
+}
+</script>
+</body>
+</html>
