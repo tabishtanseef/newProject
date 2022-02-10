@@ -33,19 +33,18 @@ div .slant::before, .main {
 }
 .slant{
 	background:#57B846;
-	padding:10px;
 	color:white;
 	font-size:32px; 
 	text-align:left;
 	line-height:38px;
-	padding-left:30px;
+	padding:15px 40px;
 	width:100%;
 	border-radius:20px  20px 0px 0px; 
 
 }
 
 .main {
-background-color:#fff;
+	background-color:#fff;
 	display: block;
 	margin: 0px 0 30px 0px;
 	padding: 0.5em;
@@ -56,9 +55,9 @@ background-color:#fff;
 	border-radius:0px 0px 20px 20px; 
 	
 }
-.container{
-	height:20px;;
-	width:80%;
+.container-fluid{
+	height:20px;
+	width:90%;
 	border-radius:20px 20px 20px; 
 
 }
@@ -69,14 +68,14 @@ background-color:#fff;
 .icon{
 	width:50px;
 	height:50px;
-	margin-top:-24px;
 }
 span{
- color:#57B846;
- font-size:22px;
-
+	color:#57B846;
+	font-weight:bold;
+	font-size:24px;
 }
 .content {
+	padding:25px;	
     position:relative;
     z-index:1;
 }
@@ -115,58 +114,59 @@ span{
 	border-top: 1px solid #9ea2a2 !important;
 }
 #if {
-  height:calc(80vh - 4px);
-  width:calc(80vw - 4px);
-  box-sizing: border-box;
+	height:calc(80vh - 4px);
+	width:calc(80vw - 15px);
+	box-sizing: border-box;
+}
+.box-iframe{
+	margin-top:20px; 
+	width:100%; 
+	height:250px;
 }
 
 </style>
 <body><br>
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
-		<div class="col-md-12 question"style="text-align:right;">
-			<a href="../../class.html"><img src="../../images/return.png" class="icon"></img></a><br>
-		</div>
-	</div>
-	<div class="row content">
-		<div class="col-md-12 slant"><h2>3. Oh My! Look at the Sky</h2></div>
+		<div class="col-md-12 slant"><h2>3. Oh My! Look at the Sky <span style="float:right;"><a href="../../class.html"><img src="../../images/return.png" class="icon"></img></a></span></h2></div>
 		<div class="main">
-			<div class="row tt ques1">
-				<div class="col-4 content" onclick="openModal('https://www.youtube.com/embed/xtLfPyyBRlc?rel=0','Topic')">
+			<div class="row">
+				<div class="col-4 content" onclick="openModal('https://www.youtube.com/embed/aR1YPIylQMg?rel=0','Topic')">
 					<center>
-					<iframe src="https://www.youtube.com/embed/xtLfPyyBRlc?rel=0" onclick="go(1)" scrolling="no" style="margin-top:40px; width:90%; height:230px;"></iframe>
+					<iframe src="https://www.youtube.com/embed/aR1YPIylQMg?rel=0" onclick="go(1)" scrolling="no" class="box-iframe"></iframe>
 					<span>Topic</span>
 					</center>
 					<div class="overlay"></div>
 				</div>
 				<div class="col-4 content" onclick="openModal('LIS/index.html','Activity 1')" >
-					<center><iframe src="LIS/index.html" scrolling="no" style="margin-top:40px; width:90%; height:230px;"></iframe>
+					<center>
+					<iframe src="LIS/index.html" scrolling="no" class="box-iframe"></iframe>
 					<span>Activity 1</span>
 					</center>
 					<div class="overlay"></div>
 				</div>
 				<div class="col-4 content" onclick="openModal('SL/index.html','Activity 2')">
 					<center>
-					<iframe src="SL/index.html" scrolling="no"  style="margin-top:40px; width:90%; height:230px;"></iframe>
+					<iframe src="SL/index.html" scrolling="no"  class="box-iframe"></iframe>
 					<span>Activity 2</span>
 					</center>
 					<div class="overlay"></div>
 				</div>
 				<div class="col-4 content" onclick="openModal('SW/index.html','Activity 3')">
-					<center><iframe src="SW/index.html" scrolling="no" style="margin-top:40px; width:90%; height:230px;"></iframe>
+					<center><iframe src="SW/index.html" scrolling="no" class="box-iframe"></iframe>
 					<span>Activity 3</span>
 					</center>
 					<div class="overlay"></div>
 				</div>
 				<div class="col-4 content" onclick="openModal('UNW/index.html','Activity 4')">
-					<center><iframe src="UNW/index.html" scrolling="no"  style="margin-top:40px; width:90%; height:230px;"></iframe>
+					<center><iframe src="UNW/index.html" scrolling="no"  class="box-iframe"></iframe>
 					<span>Activity 4</span>
 					</center>
 					<div class="overlay"></div>
 				</div>
 				<div class="col-4 content" onclick="openModal('../report.html','Report')">
 					<center>
-					<iframe src="../report.html" scrolling="no"  style="margin-top:40px; width:90%; height:230px;"></iframe>
+					<iframe src="../report.html" scrolling="no"  class="box-iframe"></iframe>
 					<span>Report</span>
 					</center>
 					<div class="overlay"></div>
@@ -175,6 +175,7 @@ span{
 		</div>
 	</div>
 </div>
+
 <center>
 <div class="modal fade right" id="exampleModalPreview" tabindex="-1" role="dialog" aria-labelledby="exampleModalPreviewLabel" aria-hidden="true">
     <div class="modal-dialog-full-width modal-dialog momodel modal-fluid" role="document">
@@ -194,11 +195,14 @@ span{
 </center>
 </body>
 <script>
-function openModal(a,b){
-	console.log('hii');	
-	$('#exampleModalPreviewLabel').html(b);
-	$('#if').attr('src', a);
-	$('#exampleModalPreview').modal('show');
-}
+	$(document).ready(function(){
+		localStorage.setItem('chapter', 'Oh My! Look at the Sky');
+	});
+	function openModal(a,b){
+		console.log('hii');	
+		$('#exampleModalPreviewLabel').html(b);
+		$('#if').attr('src', a);
+		$('#exampleModalPreview').modal('show');
+	}
 </script>
 </html>
